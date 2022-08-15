@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar{
+  width: 1vw;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #9aa7e2;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #1234d0;
+  width: 1.5vw;
+}
+::-webkit-scrollbar-track{
+  background-color: beige;
+}
+
+body {
+    background-repeat: no-repeat;
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+  justify-content: center;
+  display: flex;
+}
+button{
+  min-width: 180px !important;
+  border-radius: 5px !important;
+}
+.navbar{
+  height: 100px;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(241, 241, 236);
+}
+.navbar-brand{
+  display: inline-flex;
+  align-items: center;
+  width: 70px;
+  margin: 10px;
+}
+.form-inline{
+  align-items: center;
+  display: flex;
+}
+.form-control{
+  margin-right: 10px;
+}
+.btn-search{
+  margin-inline: 5px !important;
+  border: solid 2px #1234d0;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.btn-search:hover{
+  background: #1234d0;
+  transition: 0.5s;
+  color: white !important;
+  transform: scale(1.02);
+}
+.bar-search{
+  background-color: inherit;
+  border: solid 2px #1234d0;
+  border-radius: 8px;
+  transition: 0.5s;
+  margin-inline: 5px;
+  height: 3em;
+  width: 400px;
+}
+
+img{
+  vertical-align: middle;
+  transform: translateX(-20px);
+}
+table{
+  margin: 0 !important;
+}
+  button a{
+    color: black;
+    font-weight: 1.07em;
+    text-decoration: none !important;
+  }
+  button a:hover{
+    color: white;
+  }
+.dash{
+  justify-content: center;
+  background: #fff;
+  width: 500px;
+  margin: 10px;
+  display: -webkit-box;
+  display: grid;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 2px 25px #9aa7e2;
+  transition: 0.8s;
+}
+.dash:hover{
+  transition: 0.8s;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 25px #9aa7e2;
+}
+  .dash h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+  }
+  .dash .content {
+    padding: 35px;
+    text-align: center;
+}
+button{
+    margin: 5px auto !important;
+    font: 2em;
+    text-decoration: none;
+    color: black;
+    border: 1px, solid #1234d0;
+    padding: 12px 34px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+button:hover{
+    border: 1px solid #1234d0;
+    background: #1234d0;
+    color: white;
+    font-weight: 1000;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+.show{
+  min-width: 320px;
+  margin: 10px;
+  text-align:center; 
+  font-size:1.5em;
+  background: beige !important;
+  border-radius: 10px;
+}
+.action{
+    text-align: center;
+    padding: 5px;
+}
+.logo{
+  display: flex !important;
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+}
+.form-group {
+    margin: 20px !important;
+}
+img{
+  width: -webkit-fill-available !important;
+}
+
+/* for the client-info */
+.card{
+  justify-content: center;
+  background: #fff;
+  width: 500px;
+  margin: 10px;
+  display: -webkit-box;
+  display: grid;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 2px 25px #9aa7e2;
+  transition: 0.8s;
+}
+.card:hover{
+  transition: 0.8s;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 25px #9aa7e2;
+}
+  .card h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+  }
+  .card .content {
+    padding: 35px;
+    text-align: center;
+}
+
+.col{
+  display: flex;;
+  margin: 10px;
+  padding: 5px;
+  justify-content: space-between ;
+}
+.col img{
+  width: 46px !important;
+}
+
+
+.table{
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+tr{
+  background: none;
+  text-align: center;
+}
+tr:hover{
+  background: beige;
+  color: black;
+  transition: 0.1s;
+}
+th{
+  text-align: center;
+}
+
+@media (max-width: 500px){
+  .container{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .dash{
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .action{
+    padding: 0;
+  }
+  .action button{
+    padding: 0;
+  }
+}
