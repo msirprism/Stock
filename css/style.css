@@ -4,7 +4,11 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
-
+h4{
+  text-align: center;
+  padding: 10px;
+  font-weight: 100 !important;
+}
 ::-webkit-scrollbar{
   width: 1vw;
 }
@@ -25,9 +29,22 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 .container{
+  width: auto !important;
+  height: max-content;
   justify-content: center;
   display: flex;
 }
+.container-left{
+  width: auto !important;
+  height: max-content;
+  justify-content: center;
+  margin: auto;
+  min-width: 620px;
+}
+.container-left .card {
+  width: auto;
+}
+
 button{
   min-width: 180px !important;
   border-radius: 5px !important;
@@ -89,6 +106,19 @@ table{
   button a:hover{
     color: white;
   }
+button.dpr{
+  transform: rotate(180deg);
+  display: inherit;
+  background: none;
+}
+button.dpr:hover{
+  background: none;
+}
+button.dpr:active{
+  transform: rotate(0deg);
+}
+
+
 .dash{
   justify-content: center;
   background: #fff;
@@ -179,7 +209,7 @@ img{
 }
 .card:hover{
   transition: 0.8s;
-  transform: scale(1.02);
+  transform: scale(1.002);
   box-shadow: 2px 2px 25px #9aa7e2;
 }
   .card h1 {
@@ -193,7 +223,6 @@ img{
 }
 
 .col{
-  display: flex;;
   margin: 10px;
   padding: 5px;
   justify-content: space-between ;
@@ -201,7 +230,9 @@ img{
 .col img{
   width: 46px !important;
 }
-
+.wrap{
+  display: flex;
+}
 
 .table{
   margin: 10px;

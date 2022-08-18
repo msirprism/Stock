@@ -1,5 +1,6 @@
 <?php require ("config.php");
 include "header.php";
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +75,7 @@ include "header.php";
                                                 <td><?php echo $row['date'];?><br>
                                                     <?php echo $row['time'];?></td>
                                                 <td><?php echo $row['name'];?></td>
-                                                <td><?php echo $row['ref'];?></td>
+                                                <th><a href="/stockosio/php/machcount.php?id=<?php echo($row['id']);?>"><?php echo $row['ref'];?></a></th>
                                                 <td><?php echo $row['color'];?></td>
                                                 <td><?php echo $row['quantity'];?></td>                                       
                                             </tr>                             

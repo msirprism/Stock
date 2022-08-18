@@ -12,6 +12,7 @@ $result2 = $conn->query($sql5);
 $result3 = $conn->query($sql);
 $result4 = $conn->query($sql3);
 $result5 = $conn->query($sql4);
+$result6 = $conn->query($sql2);
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -42,7 +43,7 @@ $result5 = $conn->query($sql4);
     <div class="login-form">
         <form action="" method= "POST">
             <div class="content"><img src="/stockosio/img/s-fab.png"></div>
-            <h1>Livrasion</h1>
+            <h1><img src="/stockosio/img/cart.svg">Livrasion</h1>
             <div class="container">
                 <div class="input-field">
                     <label>Client-Name</label>
@@ -74,6 +75,8 @@ $result5 = $conn->query($sql4);
                         <?php while($row = $result4->fetch_array()){?>
                         <option name="ref"><?php echo $row['ref'];}?></option>
                         <?php while($row = $result5->fetch_array()){?>
+                        <option name="ref"><?php echo $row['ref'];}?></option>
+                        <?php while($row = $result6->fetch_array()){?>
                         <option name="ref"><?php echo $row['ref'];}?></option>
                     </select>
                 </div>

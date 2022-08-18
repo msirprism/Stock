@@ -58,6 +58,17 @@ border-radius: 8px !important;
     width: 245px;
     height: 115px;
 }
+label>img{
+    margin:auto;
+    transition:0.3s;
+}
+label>img:hover{
+    transform: scale(1.05);
+    transition:0.3s;
+}
+.image-upload>input{
+    display: none !important;
+}
 .login-form {
 background: #fff;
 width: 500px;
@@ -96,8 +107,12 @@ outline: none;
 -webkit-transition: all .2s;
 transition: all .2s;
 }
+img#output{
+    margin: auto;
+    width: 40px !important;
+}
 .login-form .content img{
-    width: 35% !important;
+    width: 50% !important;
 }
 .login-form .input-field input::-webkit-input-placeholder {
 text-transform: uppercase;
@@ -163,6 +178,10 @@ border-bottom-right-radius: 4px;
 }
 .login-form .action button:nth-child(2):hover {
 background: #1234d0;
+}
+h1 img{
+    width: 46px !important;
+    margin-inline: 15px;
 }
 .container{
     display: grid;

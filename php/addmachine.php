@@ -36,7 +36,7 @@ while($row=mysqli_fetch_array($mach)){
     <div class="login-form">
         <form action="" method= "POST">
             <div class="container"><img src="/stockosio/img/s-fab.png"></div>
-            <h1>ADD-Machine</h1>
+            <h1><img src="/stockosio/img/printer.svg">ADD-Machine</h1>
             <div class="show">
                 <?php echo htmlentities("Total: ".$count_mach);?>
             </div>

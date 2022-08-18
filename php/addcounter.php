@@ -38,7 +38,7 @@ while($row=mysqli_fetch_array($counter)){
     <div class="login-form">
         <form action="" method= "POST">
             <div class="container"><img src="/stockosio/img/s-fab.png"></div>
-            <h1>ADD-Compter</h1>
+            <h1><img src="/stockosio/img/counter.svg">ADD-Compter</h1>
             <div class="show">
                 <?php echo htmlentities(date('M,Y'));?><br>
                 <?php echo htmlentities("Total-Compter: ".$counter_mach);?>

@@ -16,7 +16,7 @@ include "header.php";
 </html>
 <div class="btn">
     <button><img src="/stockosio/img/plus.svg" style="width: 15px !important;"><a href="/stockosio/php/addmachine.php">Machine</a></button>
-    <button><img src="/stockosio/img/account.svg" style="width: 20px !important;"><a href="/stockosio/php/client.php">Client-info</a></button>
+    <button><img src="/stockosio/img/client.svg" style="width: 20px !important;"><a href="/stockosio/php/client.php">Client-info</a></button>
 </div>
 <?php
     $sql = "SELECT * FROM machine";
@@ -29,7 +29,7 @@ include "header.php";
     else{?>
         <div class="content-header">
             <section>
-                <h1>Cartouche</h1>
+                <h1>Machine</h1>
             </section>
         </div>
         <div class="content">

@@ -22,7 +22,7 @@ session_start();
     </script>
 </head>
 <body>
-<div class="heading"><button name="info" onclick="notes()"><img src="/stockosio/img/attention.svg" style="width: 20px !important;">Info</button></div>
+<div class="heading"><button name="info" onclick="notes()"><img src="/stockosio/img/info.svg" style="width: 20px !important;">Info</button></div>
 <div class="show" id="show"><img src="/stockosio/img/attention.svg" style="width: 35px !important;"><h4>attention</h4><h5>Compter auto reset on 1st of every month on 00:00</h5></div>
 <script>
 function notes() {
@@ -37,7 +37,7 @@ function notes() {
 </script>
 <div class="btn">
     <button name="clients"><img src="/stockosio/img/plus.svg" style="width: 15px !important;"><a href="/stockosio/php/addclients.php">clients</a></button>
-    <form action="/stockosio/php/client.php" method="POST"><button  name="reset" type="submit"><img src="/stockosio/img/reset.svg" style="width: 15px !important;">compter</button></form>
+    <form action="/stockosio/php/client.php" method="POST"><button  name="reset" type="submit"><img src="/stockosio/img/reset.svg" style="width: 15px !important;">compteur</button></form>
 </div>
 <?php
     $sql = "SELECT * FROM clients";
@@ -59,12 +59,12 @@ function notes() {
                         <div class="box-body table-responsive">
                             <table id="" class="table table-bordered table-hover table-striped">
                                 <thead>
-                                    <tr>                                                  
-                                        <th>#</th>
+                                    <tr>
                                         <th>Database<br>ID</th> 
-                                        <th>Database<br>Date(Y-M-D)/<br>
-                                            Time(h-m-s)</th>
-                                        <th>client<br>phone<br>address</th>
+                                        <th>Database<br>Date(Y-M-D)/<br>Time(h-m-s)</th>
+                                        <th>client</th>
+                                        <th>phone</th>
+                                        <th>address</th>
                                         <th>Machine<br>Type<br>Ref.</th>  
                                         <th>COMPTER<br>Month<br><?php echo(date('(M/Y)'));?></th>
                                         <th>Total<br>Print-<br>Revenue(€)</th>        
@@ -76,7 +76,7 @@ function notes() {
                 </diV>
             </diV>
         </section>
-        <?php $i=1;
+        <?php $i=1;$st_id='';
         while($row = $result2->fetch_array()){
         ?>
             <section class="content">
@@ -86,15 +86,13 @@ function notes() {
                             <div class="box-body table-responsive">
                                 <table id="" class="table table-bordered table-hover table-striped">
                                     <thead>
-                                        <tr>
-                                            <td><?php echo $i;?></td>                                                                                
+                                        <tr>                                                                              
                                             <td><?php echo $row['id'];?></td>
                                             <td><?php echo $row['date'];?><br>
                                                 <?php echo $row['time'];?></td>
-                                            <td><a href='/stockosio/php/clientinfo.php?id=".$row["id"]."'>
-                                                client :<?php echo $row['name'];?><br>
-                                                ph:<?php echo $row['phone'];?><br>
-                                                add:<?php echo $row['address'];?></a></td>
+                                            <th><a href="/stockosio/php/clientinfo.php?id=<?php echo($row['id']);?>"><?php echo $row['name'];?></a></th>
+                                            <td><?php echo $row['phone'];?></td>
+                                            <td><?php echo $row['address'];?></td>
                                             <td>mach :<?php echo $row['machine'];?><br>
                                                 type :<?php echo $row['type'];?><br>
                                                 ref :<?php echo $row['ref'];?></td> 
@@ -106,25 +104,10 @@ function notes() {
                                 </table>
                             </diV>
                         </diV>
-                    </diV>
+                    </diV> 
                 </diV>
             </section>
         <?php
-        $sql3= "SELECT * FROM machine";
-        $result3 = $conn->query($sql3);
-        $row2 = $result3->fetch_array();
-        $_SESSION['itterate']=$i;
-        $_SESSION['varid']=$row['id'];
-        $_SESSION['varname']=$row['name'];
-        $_SESSION['varmach']=$row['machine'];
-        $_SESSION['varphone']=$row['phone'];
-        $_SESSION['varaddress']=$row['address'];
-        $_SESSION['varmachine']=$row['machine'];
-        $_SESSION['vartype']=$row['type'];
-        $_SESSION['varref']=$row['ref'];
-        $_SESSION['varcolor']=$row['color'];
-        $_SESSION['varnb']=$row['nb'];
-        $_SESSION['vartotal']=$row['total'];
         $i++; //while loop
     }
     if(isset($_POST['reset']) || date('j', time())==1){

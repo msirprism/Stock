@@ -29,12 +29,20 @@ while($row=mysqli_fetch_array($cl)){
     <script>
     if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
-    }
+    }.
     </script>
 </meta>
 </head>
 <body>
     <!-- partial:index.partial.html -->
+    <script>
+        file.onchange = evt => {
+        const [file] = file.files
+        if (file) {
+            blah.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
     <div class="login-form">
         <form action="" method= "POST">
             <div class="container"><img src="/stockosio/img/s-fab.png"></div>
@@ -44,8 +52,17 @@ while($row=mysqli_fetch_array($cl)){
             </div>
             <div class="content">
                 <div class="input-field">
-                    <label>Select image:</label>
-                    <input type="image" name="image" accept="image/*">
+                    <img id="output"/>
+                    <input accept="image/*" type='file' id="file" onchange="loadFile(event)"/>
+                    <script>
+                    var loadFile = function(event) {
+                        var output = document.getElementById('output');
+                        output.src = URL.createObjectURL(event.target.files[0]);
+                        output.onload = function() {
+                        URL.revokeObjectURL(output.src) // free memory
+                        }
+                    };
+                    </script>
                 </div>
                 <div class="input-field">
                     <label>Client</label>

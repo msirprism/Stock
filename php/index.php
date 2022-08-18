@@ -55,8 +55,9 @@ while($row=mysqli_fetch_array($comp)){
                 <button><a href="/stockosio/php/unitimage.php">Unit-Image</a></button>
                 <button><img src="/stockosio/img/client.svg" style="width: 20px !important;"><a href="/stockosio/php/client.php">Client-Info</a></button>
                 <button><img src="/stockosio/img/cart.svg" style="width: 20px !important;"><a href="/stockosio/php/livrasion_list.php">Livrasion</a></button>
-                <button><a href="/stockosio/php/machine.php">Machine</a></button>
-                <button><img src="/stockosio/img/counter.svg" style="width: 20px !important;"><a href="/stockosio/php/addcounter.php">compter</a></button>  
+                <button><img src="/stockosio/img/printer.svg" style="width: 20px !important;"><a href="/stockosio/php/machine.php">Machine</a></button>
+                <button><img src="/stockosio/img/counter.svg" style="width: 20px !important;"><a href="/stockosio/php/addcounter.php">compteur</a></button>
+                <button><img src="/stockosio/img/gear.svg" style="width: 20px !important;"><a href="/stockosio/php/addintervension.php">Intervension</a></button>
             </div>
         </div>
 
